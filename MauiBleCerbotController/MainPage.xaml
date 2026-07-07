@@ -39,7 +39,7 @@
                 <Picker BackgroundColor="BlanchedAlmond"
                             MinimumWidthRequest="200"
                             ItemsSource="{Binding Devices}"
-                            ItemDisplayBinding="{Binding .}"
+                            ItemDisplayBinding="{Binding DisplayName}"
                             SelectedItem="{Binding SelectedDevice}" />
 
             </HorizontalStackLayout>

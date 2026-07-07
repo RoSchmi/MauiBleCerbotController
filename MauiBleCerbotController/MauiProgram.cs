@@ -2,6 +2,7 @@
 using MauiBleCerbotController.Converters;
 using MauiBleCerbotController.Interfaces;
 using MauiBleCerbotController.Services;
+using MauiBleCerbotController.ViewModels;
 using Microsoft.Extensions.Logging;
 
 namespace MauiBleCerbotController
@@ -26,8 +27,9 @@ namespace MauiBleCerbotController
             builder.Services.AddBluetoothServices();
             builder.Services.AddSingleton<INavigationService, NavigationService>();
 
-            builder.Services.AddSingleton<MainPage>();
-            builder.Services.AddSingleton<ViewModels.MainPageViewModel>();
+            builder.Services.AddTransient<MainPage>();
+            builder.Services.AddTransient<ViewModels.MainPageViewModel>();
+            builder.Services.AddTransient<DeviceViewModel>();
             builder.Services.AddSingleton<BoolToColorConverter>();
             builder.Services.AddSingleton<InverseBoolConverter>();
             builder.Services.AddBluetoothServices();

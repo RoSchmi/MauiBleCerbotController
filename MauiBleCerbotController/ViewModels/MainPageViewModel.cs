@@ -343,6 +343,8 @@ namespace MauiBleCerbotController.ViewModels
 
               ApplyFilters();
 
+                var theCopy = Devices;
+
                 _logger.LogDebug("Device list updated - Total devices: {DeviceCount}", DeviceCount);
             });
         }
@@ -381,6 +383,7 @@ namespace MauiBleCerbotController.ViewModels
 
             Devices.UpdateFrom(filtered.OrderByDescending(device => device.SignalStrengthDbm));
             OnPropertyChanged(nameof(DeviceCount));
+            int breakpoint384 = 1;
         }
 
 
